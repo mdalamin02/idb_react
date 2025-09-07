@@ -1,32 +1,28 @@
 import React from "react";
 import "./App.css";
-import Class1 from "./class01/Class1";
-import Class1State from "./class01/Class1State";
+import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
+import EmployeeComponent from "./Class04/EmployeeComponent";
+import NavbarComponent from "./Class04/NavbarComponent";
 import EmployeeSalary from "./Class02/EmployeeSalary";
-import FunctionalLifeCycle from "./Class02/FunctionalLifeCycle";
-import HandlerEvent from "./Class02/HandlerEvent";
-import ListRendering from "./Class02/ListRendering";
-import UserList from "./Class03/UserList";
-import UseCard from "./Class03/UseCard";
-import Class2Props from "./Class03/UseCard2";
-import RoleBasedRender from "./Class03/RoleBasedRender";
+import LoginComponent from './Class04/LoginComponent'
 
 function App() {
-  const myname = "Welcome to React";
   return (
-    <div className="App">
-      <h1>{myname}</h1>
-      <Class1 />
-      <Class1State />
-      <RoleBasedRender />
-      <EmployeeSalary />
-      <FunctionalLifeCycle />
-      <HandlerEvent />
-      <ListRendering />
-      <UserList />
-      <UseCard name="Alamin" email="alamin@gmail" />
-      <Class2Props />
-    </div>
+ <Router>
+
+<NavbarComponent />
+
+<div className="container mt-4" >
+
+  <Routes>
+    <Route path="/" element={<EmployeeSalary />} />
+    <Route path="employees" element={<EmployeeComponent />} />
+    <Route path="/login" element={<LoginComponent />} />
+    
+  </Routes>
+
+</div>
+ </Router>
   );
 }
 
