@@ -4,8 +4,8 @@ import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
 import EmployeeComponent from "./Class04/EmployeeComponent";
 import NavbarComponent from "./Class04/NavbarComponent";
 import EmployeeSalary from "./Class02/EmployeeSalary";
-import LoginComponent from './Class04/LoginComponent'
-
+import LoginComponent from "./Class04/LoginComponent";
+import RegisterComponent from "./Class05/RegistrationComponent";
 function App() {
   return (
  <Router>
@@ -18,7 +18,7 @@ function App() {
     <Route path="/" element={<EmployeeSalary />} />
     <Route path="employees" element={<EmployeeComponent />} />
     <Route path="/login" element={<LoginComponent />} />
-    
+    <Route path="/register" element={<RegisterComponent />} />
   </Routes>
 
 </div>
